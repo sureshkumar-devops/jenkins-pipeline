@@ -8,7 +8,7 @@ pipeline
     {
       steps
       {
-        withMaven(maven : 'maven')
+        withMaven(maven : 'MAVEN_HOME')
         {
           sh 'mvn clean compile'
         }
@@ -19,7 +19,7 @@ pipeline
     {
       steps
       {
-        withMaven(maven : 'maven')
+        withMaven(maven : 'MAVEN_HOME')
         {
           sh 'mvn test'
         }
@@ -30,7 +30,7 @@ pipeline
     {
        steps
        {
-         withMaven(maven : 'maven')
+         withMaven(maven : 'MAVEN_HOME')
          {
            sh 'mvn install'
          }
