@@ -1,0 +1,22 @@
+pipeline
+{
+  agent any
+  environment
+  {
+   NAME = 'SURESH'
+   LASTNAME = 'KUMAR'
+   OCCUPATION = 'DEVOPS ENGINEER'
+  }
+ 
+   
+  stages
+  {
+    stage('Build')
+    {
+      steps
+      {
+        sh 'echo $NAME $LASTNAME'
+      }
+    }
+  }
+}
